@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat:ital,wght@0,700;1,500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: hsl(30, 38%, 92%);
+}
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 520px;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 10px;
+}
+
+.imgBox {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(100% / 2);
+    height: 400px;
+}
+
+.imgBox img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+ul {
+    list-style: none;
+    position: relative;
+    width: calc(100% / 2);
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    justify-content: space-evenly;
+}
+
+ul > li {
+    width: 80%;
+    margin: 0 auto;
+}
+
+li:nth-child(1) {
+    text-transform: uppercase;
+    color: hsl(228, 12%, 48%);
+    letter-spacing: 3px;
+}
+
+li:nth-child(2) {
+    font-family: 'Fraunces', serif;
+    font-size: 30px;
+    line-height: 0.9;
+}
+
+li:nth-child(3) {
+    color: hsl(228, 12%, 48%);
+    line-height: 1.6;
+    font-size: 12px;
+}
+
+li:nth-child(4) {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    align-items: center;
+}
+
+li:nth-child(4) div:nth-child(1) {
+    font-family: 'Fraunces', serif;
+    font-size: 30px;
+    color: hsl(158, 36%, 37%);
+}
+
+li:nth-child(4) div:nth-child(2) {
+    text-decoration: line-through;
+    color: hsl(228, 12%, 48%);
+}
+
+li:nth-child(5) {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(158, 36%, 37%);
+    padding: 15px;
+    border-radius: 10px;
+    gap: 10px;
+}
+
+li:nth-child(5):hover {
+    background-color: hsl(212, 21%, 14%);
+    cursor: pointer;
+}
+
+li:nth-child(5) div:nth-child(1) {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15px;
+    height: 15px;
+}
+
+li:nth-child(5) div:nth-child(1) img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+li:nth-child(5) div:nth-child(2) {
+    color: hsl(0, 0%, 100%);
+}
+
+@media screen and (max-width: 375px) {
+    .container {
+        flex-direction: column;
+        width: 90%;
+        height: 90vh;
+    }
+
+    .imgBox {
+        width: 100%;
+        height: 50%;
+    }
+
+    .imgBox img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-bottom-left-radius: 0px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        background-image: url('images/image-product-mobile.jpg');
+    }
+
+    ul {
+        width: 100%;
+        margin: 8px auto;
+    }
+
+    ul > li {
+        margin: 4px auto;
+    }
+
+    li:nth-child(3) {
+        font-size: 12.5px;
+    }
+}
